@@ -9,6 +9,7 @@ The data used in this project is hosted by a competition on the Kaggle platform,
 ### Introduction
 
 In this project, we aim to build a new mechanism, the Attention Filter Gate, which will address the weaknesses of previous approaches used to handle certain problems, such as:
+- **Critical Problems we assign ** 
 
     * Losing features during extraction when using deep segmentation models
     * Handling data with higher resolutions
