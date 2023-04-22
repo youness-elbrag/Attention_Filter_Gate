@@ -10,13 +10,12 @@ The data used in this project is hosted by a competition on the Kaggle platform,
 The Data we have been used is Host in Kaggle Platform competiotion , to download Run following command :
 there're few step needed to be consider before running the Script 
     * First :
-Create an account in Kaggle and Get API Token 
+            Create an account in Kaggle and Get API Token 
     * Second :
-Replace your Kaggle API Tokon which stored in **kaggle.json** in the right path in Script to have authrozation 
-
-        ```sh
-            chmod a+x download.sh && ./download.sh
-        ```
+            Replace your Kaggle API Tokon which stored in **kaggle.json** in the right path in Script to have authrozation 
+```sh
+ chmod a+x download.sh && ./download.sh
+```
 
 ### Introduction
 
