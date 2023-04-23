@@ -18,9 +18,8 @@ The data used in this project is hosted by a competition on the Kaggle platform,
     
           - Replace your Kaggle API Tokon which stored in **kaggle.json** in the right path in Script to have authrozation and following this command :
         
-                ```sh
                     chmod a+x download.sh && ./download.sh
-                ```
+        
     3. the Virtualization Sample: 
 
          ![virtualization](Figures/image_label_overlay_animation.gif)
