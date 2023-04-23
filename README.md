@@ -80,7 +80,7 @@ Through our exploration of these weaknesses, we aim to provide a better solution
         decoder, and it provides a potential solution for throughput, latency, FLOP, and
         algorithm complexity issues. The Attention Filter Gate improves on the existing
         Attention Gate with intuitive tricks not addressed by previous methods.
-    5. Keywords:
+    * Keywords:
 
         Medical Segmentation, Neural networks, Transformers, U-Net model, Attention
         Gate , Fast Fourier Transformation (FFT)
