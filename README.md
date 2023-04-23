@@ -1,10 +1,10 @@
 # Attention Filter Gate
 
-    ***Welcome to the Attention Filter Gate repository! Here, we provide an implementation of our proposed method, the Attention Filter, which is based on the Fast Fourier Transform. In the accompanying PDF document, we explain in detail the steps we have taken to tackle the problem at hand.***
+***Welcome to the Attention Filter Gate repository! Here, we provide an implementation of our proposed method, the Attention Filter, which is based on the Fast Fourier Transform. In the accompanying PDF document, we explain in detail the steps we have taken to tackle the problem at hand.***
 
 ### Dataset Description
 
-    The data used in this project is hosted by a competition on the Kaggle platform, namely the Left Atrial Segmentation Challenge. We have used medical images of the left atrium, which are in 3D and come with 30 corresponding masks.
+The data used in this project is hosted by a competition on the Kaggle platform, namely the Left Atrial Segmentation Challenge. We have used gmedical images of the left atrium, which are in 3D and come with 30 corresponding masks.
 
 * Data Source :</br>
 
