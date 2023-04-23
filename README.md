@@ -1,25 +1,29 @@
 # Attention Filter Gate
 
-Welcome to the Attention Filter Gate repository! Here, we provide an implementation of our proposed method, the Attention Filter, which is based on the Fast Fourier Transform. In the accompanying PDF document, we explain in detail the steps we have taken to tackle the problem at hand.
+    ***Welcome to the Attention Filter Gate repository! Here, we provide an implementation of our proposed method, the Attention Filter, which is based on the Fast Fourier Transform. In the accompanying PDF document, we explain in detail the steps we have taken to tackle the problem at hand.***
 
 ### Dataset Description
 
-The data used in this project is hosted by a competition on the Kaggle platform, namely the Left Atrial Segmentation Challenge. We have used medical images of the left atrium, which are in 3D and come with 30 corresponding masks.
+    The data used in this project is hosted by a competition on the Kaggle platform, namely the Left Atrial Segmentation Challenge. We have used medical images of the left atrium, which are in 3D and come with 30 corresponding masks.
 
 * Data Source :</br>
-The Data we have been used is Host in Kaggle Platform competiotion , to download Run following command :
-there're few step needed to be consider before running the Script 
 
-    1. **First**:</br>
+    The Data we have been used is Host in Kaggle Platform competiotion , to download Run following command :
+    there're few step needed to be consider before running the Script 
+
+    1. **First**:
+
           - Create an account in Kaggle and Get API Token 
-    2. **Second**:</br>
-          - Replace your Kaggle API Tokon which stored in **kaggle.json** in the right path in Script to have authrozation and following this command : </br>
-            ```sh
-                 chmod a+x download.sh && ./download.sh
-            ```
+    2. **Second**:
+    
+          - Replace your Kaggle API Tokon which stored in **kaggle.json** in the right path in Script to have authrozation and following this command :
+        
+                ```sh
+                    chmod a+x download.sh && ./download.sh
+                ```
     3. the Virtualization Sample: 
 
-         ![virtualization](figures/image_label_overlay_animation.gif)
+         ![virtualization](Figures/image_label_overlay_animation.gif)
 ### Introduction
 
 In this project, we aim to build a new mechanism, the Attention Filter Gate, which will address the weaknesses of previous approaches used to handle certain problems, such as:
