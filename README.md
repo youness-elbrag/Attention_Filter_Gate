@@ -37,7 +37,7 @@ Through our exploration of these weaknesses, we aim to provide a better solution
 
 ### Main Abstarct Thesis :
 * **Abstract**
-    1. Background: 
+    * Background: 
 
         Medical imaging diagnosis can be challenging due to low-resolution images caused
         by machine artifacts and patient movement. Researchers have explored algorithms
@@ -53,7 +53,7 @@ Through our exploration of these weaknesses, we aim to provide a better solution
         However, it did not solve certain computational cost issues and led researchers to
         investigate how to improve the Attention Gate in a different way while maintaining
         the same structure.
-    2. Aim : 
+    * Aim : 
 
         The aim was to improve the existing Attention Gate used in U-Net for medical
         image segmentation. The goal was to reduce the computational cost of training
@@ -67,11 +67,11 @@ Through our exploration of these weaknesses, we aim to provide a better solution
         mented between up-sampling and down-sampling to reduce matrix multiplication.
         The method tackled computational cost, complexity algorithm, throughput, la-
         tency, FLOP, and enhanced feature extraction.
-    3. Results
+    * Results
     
         Describe the main results of after finishing some Quantitative results empty for
         now
-    4. Conclusion:
+    * Conclusion:
 
         This thesis investigates the Attention Filter Gate to address problems such as
         computational cost and feature extraction, providing an alternative approach to
@@ -80,7 +80,7 @@ Through our exploration of these weaknesses, we aim to provide a better solution
         decoder, and it provides a potential solution for throughput, latency, FLOP, and
         algorithm complexity issues. The Attention Filter Gate improves on the existing
         Attention Gate with intuitive tricks not addressed by previous methods.
-    Keywords:
+    5. Keywords:
 
         Medical Segmentation, Neural networks, Transformers, U-Net model, Attention
         Gate , Fast Fourier Transformation (FFT)
