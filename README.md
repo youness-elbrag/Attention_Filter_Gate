@@ -112,7 +112,7 @@ in Directory folder Data that contain following these path :
 
 after getting the right Path run the Script **Post_processing.py** following command 
 ```sh
-python script_name.py --root_img heart-mri-image-dataset-left-atrial-segmentation/imagesTr \
+python Post_processing.py --root_img heart-mri-image-dataset-left-atrial-segmentation/imagesTr \
 --root_lab  heart-mri-image-dataset-left-atrial-segmentation/labelsTr
 ```
 after the script done you will have a new folder Directory contain the processed image Called **Processed** 
