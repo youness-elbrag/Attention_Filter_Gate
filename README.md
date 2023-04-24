@@ -94,26 +94,25 @@ so Far after Describing the Problem statment now we will look forward to Config 
 * **ENV**:
     - in this step you will need to create your own env using python following command :
 
-            ```sh
-            python -m venv venv && source venv/bin/activate
-            ```
+    ```sh
+        python -m venv venv && source venv/bin/activate
+    ```
     -  you will need to install dependencies of Project has been used following command
-
-            ```sh 
-                pip install -r requirements.txt
-            ```
+     ```sh 
+     pip install -r requirements.txt
+     ```
 ### Processing the Data :
 
 after downloading the data by following the guides we provide above , we will need to set the Path of **Images** and **Masks**
 in Directory folder Data that contain following these path :
 
-- root_img: heart-mri-image-dataset-left-atrial-segmentation/imagesTr
+- root_img : heart-mri-image-dataset-left-atrial-segmentation/imagesTr
 - root_lab : heart-mri-image-dataset-left-atrial-segmentation/labelsTr
 
 after getting the right Path run the Script **Post_processing.py** following command 
-     ```sh
-     python script_name.py --root_img heart-mri-image-dataset-left-atrial-segmentation/imagesTr \
-    --root_lab  heart-mri-image-dataset-left-atrial-segmentation/labelsTr
-    ```
+```sh
+python script_name.py --root_img heart-mri-image-dataset-left-atrial-segmentation/imagesTr \
+--root_lab  heart-mri-image-dataset-left-atrial-segmentation/labelsTr
+```
 after the script done you will have a new folder Directory contain the processed image Called **Processed** 
 
