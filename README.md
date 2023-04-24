@@ -24,7 +24,7 @@ The data used in this project is hosted by a competition on the Kaggle platform,
         
         in here navigate to Dataset folder and open **jupyter notebook** has full virtualization of Medical Images 
 
-             ![virtualization](Figures/image_label_overlay_animation.gif)
+        ![virtualization](Figures/image_label_overlay_animation.gif)
 ### Introduction
 
 In this project, we aim to build a new mechanism, the Attention Filter Gate, which will address the weaknesses of previous approaches used to handle certain problems, such as:
@@ -89,16 +89,15 @@ Through our exploration of these weaknesses, we aim to provide a better solution
 
 ### Setup the Enviremenet 
 
-so Far after Describing the Problem statment now we will look forward to Config our ENV to run the code following Setps :
-    
-    * **ENV**:
+so Far after Describing the Problem statment now we will look forward to Config our ENV to run the code following Setps : 
 
-        - in this step you will need to create your own env using python following command :
+* **ENV**:
+    - in this step you will need to create your own env using python following command :
 
             ```sh
             python -m venv venv && source venv/bin/activate
             ```
-       -  you will need to install dependencies of Project has been used following command
+    -  you will need to install dependencies of Project has been used following command
 
             ```sh 
                 pip install -r requirements.txt
@@ -108,14 +107,13 @@ so Far after Describing the Problem statment now we will look forward to Config 
 after downloading the data by following the guides we provide above , we will need to set the Path of **Images** and **Masks**
 in Directory folder Data that contain following these path :
 
-    * root_img: heart-mri-image-dataset-left-atrial-segmentation/imagesTr
-    * root_lab : heart-mri-image-dataset-left-atrial-segmentation/labelsTr
+- root_img: heart-mri-image-dataset-left-atrial-segmentation/imagesTr
+- root_lab : heart-mri-image-dataset-left-atrial-segmentation/labelsTr
 
-    after getting the right Path run the Script **Post_processing.py** following command 
-    
-        ```sh
-        python script_name.py --root_img heart-mri-image-dataset-left-atrial-segmentation/imagesTr \
-        --root_lab  heart-mri-image-dataset-left-atrial-segmentation/labelsTr
-        ```
-        after the script done you will have a new folder Directory contain the processed image Called **Processed** 
+after getting the right Path run the Script **Post_processing.py** following command 
+     ```sh
+     python script_name.py --root_img heart-mri-image-dataset-left-atrial-segmentation/imagesTr \
+    --root_lab  heart-mri-image-dataset-left-atrial-segmentation/labelsTr
+    ```
+after the script done you will have a new folder Directory contain the processed image Called **Processed** 
 
