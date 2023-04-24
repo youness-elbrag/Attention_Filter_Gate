@@ -17,8 +17,10 @@ The data used in this project is hosted by a competition on the Kaggle platform,
     2. **Second**:
     
           - Replace your Kaggle API Tokon which stored in **kaggle.json** in the right path in Script to have authrozation and following this command :
-        
-                    chmod a+x download.sh && ./download.sh
+            ```sh
+             chmod a+x download.sh && ./download.sh
+
+            ```
         
     3. the Virtualization Sample: 
         
@@ -92,15 +94,14 @@ Through our exploration of these weaknesses, we aim to provide a better solution
 so Far after Describing the Problem statment now we will look forward to Config our ENV to run the code following Setps : 
 
 * **ENV**:
-    - in this step you will need to create your own env using python following command :
-
-    ```sh
+    - in this step you will need to create your own env using python following command:
+        ```sh
         python -m venv venv && source venv/bin/activate
-    ```
+         ```
     -  you will need to install dependencies of Project has been used following command
-     ```sh 
-     pip install -r requirements.txt
-     ```
+         ```sh 
+        pip install -r requirements.txt
+         ```
 ### Processing the Data :
 
 after downloading the data by following the guides we provide above , we will need to set the Path of **Images** and **Masks**
