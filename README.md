@@ -1,16 +1,36 @@
 # Attention Filter Gate
 
-Welcome to the Attention Filter Gate repository! Here, we provide an implementation of our proposed method, the Attention Filter, which is based on the Fast Fourier Transform. In the accompanying PDF document, we explain in detail the steps we have taken to tackle the problem at hand.
+***Welcome to the Attention Filter Gate repository! Here, we provide an implementation of our proposed method, the Attention Filter, which is based on the Fast Fourier Transform. In the accompanying PDF document, we explain in detail the steps we have taken to tackle the problem at hand.***
 
 ### Dataset Description
 
-The data used in this project is hosted by a competition on the Kaggle platform, namely the Left Atrial Segmentation Challenge. We have used medical images of the left atrium, which are in 3D and come with 30 corresponding masks.
+The data used in this project is hosted by a competition on the Kaggle platform, namely the Left Atrial Segmentation Challenge. We have used gmedical images of the left atrium, which are in 3D and come with 30 corresponding masks.
 
+* Data Source :</br>
+
+    The Data we have been used is Host in Kaggle Platform competiotion , to download Run following command :
+    there're few step needed to be consider before running the Script 
+
+    1. **First**:
+
+          - Create an account in Kaggle and Get API Token 
+    2. **Second**:
+    
+          - Replace your Kaggle API Tokon which stored in **kaggle.json** in the right path in Script to have authrozation and following this command :
+            ```sh
+             chmod a+x download.sh && ./download.sh
+
+            ```
+        
+    3. the Virtualization Sample: 
+        
+        in here navigate to Dataset folder and open **jupyter notebook** has full virtualization of Medical Images 
+
+        ![virtualization](Figures/image_label_overlay_animation.gif)
 ### Introduction
 
 In this project, we aim to build a new mechanism, the Attention Filter Gate, which will address the weaknesses of previous approaches used to handle certain problems, such as:
-- **Critical Problems we assign ** 
-
+- **Critical Problems we assign** 
     * Losing features during extraction when using deep segmentation models
     * Handling data with higher resolutions
     * Reducing time complexity of training
@@ -18,3 +38,82 @@ In this project, we aim to build a new mechanism, the Attention Filter Gate, whi
     * Learning from spatial domain
 
 Through our exploration of these weaknesses, we aim to provide a better solution to these problems using our proposed Attention Filter Gate mechanism.
+
+### Main Abstarct Thesis :
+* **Abstract**
+    * Background: 
+
+        Medical imaging diagnosis can be challenging due to low-resolution images caused
+        by machine artifacts and patient movement. Researchers have explored algorithms
+        and mathematical insights to enhance image quality and representation. One com-
+        mon task is segmentation, which requires the detection or localization of diseases
+        around the tissue. New approaches and models using artificial intelligence, specif-
+        ically computer vision, have been developed to improve the traditional methods
+        that have not been entirely effective. Since the publication of the U-Net model
+        paper, researchers have focused on building new model architectures to segment
+        medical images more effectively. The Transformers model, a core technology be-
+        hind many AI applications today, has been a game-changer. The Attention Gate
+        was introduced in a paper and used with the U-Net model to increase performance.
+        However, it did not solve certain computational cost issues and led researchers to
+        investigate how to improve the Attention Gate in a different way while maintaining
+        the same structure.
+    * Aim : 
+
+        The aim was to improve the existing Attention Gate used in U-Net for medical
+        image segmentation. The goal was to reduce the computational cost of training
+        the model, improve feature extraction, and handle the problem of matrix multi-
+        plication used in CNN for feature extraction
+        Method
+        The Attention Filter Gate was developed to improve upon the Attention Gate.
+        Instead of learning from the spatial domain, the model was converted to the fre-
+        quency domain using the Fast Fourier Transformation (FFT). A weighted learnable
+        matrix was used to filter features in the frequency domain, and FFT was imple-
+        mented between up-sampling and down-sampling to reduce matrix multiplication.
+        The method tackled computational cost, complexity algorithm, throughput, la-
+        tency, FLOP, and enhanced feature extraction.
+    * Results
+    
+        Describe the main results of after finishing some Quantitative results empty for
+        now
+    * Conclusion:
+
+        This thesis investigates the Attention Filter Gate to address problems such as
+        computational cost and feature extraction, providing an alternative approach to
+        medical image segmentation that is both efficient and effective. The method en-
+        hances feature extraction to reduce information loss between the encoder and
+        decoder, and it provides a potential solution for throughput, latency, FLOP, and
+        algorithm complexity issues. The Attention Filter Gate improves on the existing
+        Attention Gate with intuitive tricks not addressed by previous methods.
+    * Keywords:
+
+        Medical Segmentation, Neural networks, Transformers, U-Net model, Attention
+        Gate , Fast Fourier Transformation (FFT)
+
+### Setup the Enviremenet 
+
+so Far after Describing the Problem statment now we will look forward to Config our ENV to run the code following Setps : 
+
+* **ENV**:
+    - in this step you will need to create your own env using python following command:
+        ```sh
+        python -m venv venv && source venv/bin/activate
+         ```
+    -  you will need to install dependencies of Project has been used following command
+         ```sh 
+        pip install -r requirements.txt
+         ```
+### Processing the Data :
+
+after downloading the data by following the guides we provide above , we will need to set the Path of **Images** and **Masks**
+in Directory folder Data that contain following these path :
+
+- root_img : heart-mri-image-dataset-left-atrial-segmentation/imagesTr
+- root_lab : heart-mri-image-dataset-left-atrial-segmentation/labelsTr
+
+after getting the right Path run the Script **Post_processing.py** following command 
+```sh
+python Post_processing.py --root_img heart-mri-image-dataset-left-atrial-segmentation/imagesTr \
+--root_lab  heart-mri-image-dataset-left-atrial-segmentation/labelsTr
+```
+after the script done you will have a new folder Directory contain the processed image Called **Processed** 
+
