@@ -59,4 +59,23 @@ def image_to_mask(idx_path:int ,idx_sample:int, path_train: str):
             data_mask_path.append(path_data)
     data_path, mask_path = data_mask_path[0] , data_mask_path[1]
     image_path , label_path= image_to_label_file(idx_sample,data_path,mask_path)
-    return image_path , label_path   
+    return image_path , label_path 
+
+
+
+
+class AttentionFilter(nn.Module):
+    def __init__(self, filter_in , filter_out , filter_dim):
+        super(AttentionFilter, self).__init__()
+        self.Wieghts_signal = GlobalFilter(filter_in , filter_dim)
+        self.Gate_signal = GlobalFilter(filter_out . filter_in)
+        self.NormLayar = nn.NormLayar(filter_in)
+        self.act = nn.Softmax(dim=(-1,-1))
+    def forward(self . x , g ):
+        x = self.Gate_signal(x)
+        x = self.NormLayar(x)
+        g = self.Wieghts_signal(g)
+        g = self.NormLayar(g)
+        out = torch.bmm(x,g,axis=-1)
+        scaled_out = self.Softmax(out / torch.sqrt(2*Pi*out.var(-1 , unbiased=False , keepdims=True)))
+        return scaled_out
