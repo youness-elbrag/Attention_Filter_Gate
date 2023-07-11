@@ -2,7 +2,7 @@
 
 ***Welcome to the Attention Filter Gate repository! Here, we provide an implementation of our proposed method, the Attention Filter, which is based on the Fast Fourier Transform. In the accompanying PDF document, we explain in detail the steps we have taken to tackle the problem at hand.***
 
-### Dataset Description
+## Dataset Description
 
 The data used in this project is hosted by a competition on the Kaggle platform, namely the Left Atrial Segmentation Challenge. We have used gmedical images of the left atrium, which are in 3D and come with 30 corresponding masks.
 
@@ -27,7 +27,7 @@ The data used in this project is hosted by a competition on the Kaggle platform,
         in here navigate to Dataset folder and open **jupyter notebook** has full virtualization of Medical Images 
 
         ![virtualization](Figures/image_label_overlay_animation.gif)
-### Introduction
+## Introduction
 
 In this project, we aim to build a new mechanism, the Attention Filter Gate, which will address the weaknesses of previous approaches used to handle certain problems, such as:
 - **Critical Problems we assign** 
@@ -39,7 +39,7 @@ In this project, we aim to build a new mechanism, the Attention Filter Gate, whi
 
 Through our exploration of these weaknesses, we aim to provide a better solution to these problems using our proposed Attention Filter Gate mechanism.
 
-### Main Abstarct Thesis :
+## Main Abstarct Thesis :
 * **Abstract**
     * Background: 
 
@@ -72,9 +72,20 @@ Through our exploration of these weaknesses, we aim to provide a better solution
         The method tackled computational cost, complexity algorithm, throughput, la-
         tency, FLOP, and enhanced feature extraction.
     * Results
-    
-        Describe the main results of after finishing some Quantitative results empty for
-        now
+    This study evaluated the performance of two deep learning models, namely Unet and Attention Unet, for image segmentation tasks. The goal was to compare their segmentation accuracy using the mean Dice and mean IoU scores as performance metrics.
+
+    The Unet model, based on the U-Net architecture, achieved a mean Dice score of 0.86 and a mean IoU score of 0.82. These results indicate a good level of segmentation performance, with a substantial overlap and similarity between the predicted segmentations and the ground truth masks.
+
+    On the other hand, the Attention Unet model, which incorporates attention mechanisms into the U-Net architecture, outperformed the standard Unet model. It achieved a mean Dice score of 0.90 and a mean IoU score of 0.86. The higher scores obtained by the Attention Unet model suggest that it effectively captures intricate details and improves the accuracy of the segmentation predictions.
+
+    Overall, the results demonstrate that both the Unet and Attention Unet models are effective for image segmentation tasks. However, the Attention Unet model offers superior performance, surpassing the standard Unet model in terms of both the mean Dice and mean IoU scores. These findings highlight the potential of attention mechanisms in enhancing the accuracy and quality of segmentation results.
+
+    | Model             | Mean Dice           | Mean IoU          |
+    | ----------------- | ------------------- | -------------------|
+    | Unet              | 0.8679828422922201 | 0.8268032566169375  |
+    | Attention Unet    | 0.9070712224488161 | 0.8697135584137633  |
+    | Attention Filter Unet | -- | -- |
+
     * Conclusion:
 
         This thesis investigates the Attention Filter Gate to address problems such as
@@ -89,7 +100,7 @@ Through our exploration of these weaknesses, we aim to provide a better solution
         Medical Segmentation, Neural networks, Transformers, U-Net model, Attention
         Gate , Fast Fourier Transformation (FFT)
 
-### Setup the Enviremenet 
+## Setup the Enviremenet 
 
 so Far after Describing the Problem statment now we will look forward to Config our ENV to run the code following Setps : 
 
@@ -102,7 +113,7 @@ so Far after Describing the Problem statment now we will look forward to Config 
          ```sh 
         pip install -r requirements.txt
          ```
-### Processing the Data :
+## Processing the Data :
 
 after downloading the data by following the guides we provide above , we will need to set the Path of **Images** and **Masks**
 in Directory folder Data that contain following these path :
@@ -118,7 +129,7 @@ python Post_processing.py --root_img heart-mri-image-dataset-left-atrial-segment
 after the script done you will have a new folder Directory contain the processed image Called **Processed** 
 
 
-### Usage
+## Usage
 
 The main script in this project is train.py. It provides command-line arguments for configuring the training process. To run the script check file **config.py** to tune the model based base lines , use the following command to Run Training model using Multi-GPU or single :
 ```python 
@@ -163,13 +174,13 @@ During the training process, the script performs the following steps:
 
 To run the prediction script and generate segmentations for your test samples, follow the steps below:
 
-1. Ensure that you have the necessary dependencies installed. If you haven't installed them yet, refer to the [Getting Started](#getting-started) section.
+1. Ensure that you have the necessary dependencies installed. If you haven't installed them yet, refer to the [Getting Started](#Setup) section.
 
 2. Open the terminal and navigate to the project directory.
 
 3. Run the following command to execute the `predict.py` script:
 
-   ```bash
+   ```python
    python predict.py --Config path/to/config.yaml --sample path/to/test_sample.nii --output path/to/output
    ```
    ![Prediction](Figures/image_label_overlay_over_slice_Prediction_Test.gif)
@@ -183,8 +194,8 @@ To run the prediction script and generate segmentations for your test samples, f
     - The --output argument specifies the directory where the generated segmentations will be saved.
 
     > Make sure that the configuration file, test sample, and output directory paths are correct and accessible.
-    >
-    > The script will use the latest checkpoint file found in the `./Wieghts/logs` directory for loading the pre-trained model.
-    >
-    > The generated segmentations will be saved in the output directory as separate image files.
+        >
+        > The script will use the latest checkpoint file found in the `./Wieghts/logs` directory for loading the pre-trained model.
+        >
+        > The generated segmentations will be saved in the output directory as separate image files.
 
