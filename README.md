@@ -156,20 +156,20 @@ python train.py --Config path/to/config.yaml --Epochs 100 --batch_size 16 --outp
     Make sure to update the configuration file with the appropriate values for your dataset.
     Training
 
-##### Training
+### Training
 
-During the training process, the script performs the following steps:
+1.During the training process, the script performs the following steps:
 
-    - Initializes the configuration settings.
-    - Writes the configuration to a YAML file.
-    - Parses the command-line arguments.
-    - Reads the configuration from the YAML file.
-    - Loads the training and validation datasets.
-    - Initializes the data loaders.
-    - Defines the loss function.
-    - Instantiates the segmentation model.
-    - Sets up callbacks for model checkpointing, CPU usage - - monitoring, and throughput logging.
-    - Starts the training using the Trainer.fit method.
+- Initializes the configuration settings.
+- Writes the configuration to a YAML file.
+- Parses the command-line arguments.
+- Reads the configuration from the YAML file.
+- Loads the training and validation datasets.
+- Initializes the data loaders.
+- Defines the loss function.
+- Instantiates the segmentation model.
+- Sets up callbacks for model checkpointing, CPU usage - - monitoring, and throughput logging.
+- Starts the training using the Trainer.fit method.
 
 ## Running Prediction
 
