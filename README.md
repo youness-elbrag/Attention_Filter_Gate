@@ -117,3 +117,74 @@ python Post_processing.py --root_img heart-mri-image-dataset-left-atrial-segment
 ```
 after the script done you will have a new folder Directory contain the processed image Called **Processed** 
 
+
+### Usage
+
+The main script in this project is train.py. It provides command-line arguments for configuring the training process. To run the script check file **config.py** to tune the model based base lines , use the following command to Run Training model using Multi-GPU or single :
+```python 
+python train.py --Config path/to/config.yaml --Epochs 100 --batch_size 16 --output path/to/output
+```
+#### Command-line Arguments
+
+1. The script accepts the following command-line arguments:
+
+    * --Config: Path to the configuration file in YAML format.
+    * --Epochs: Number of training epochs.
+    * --batch_size: Batch size for training and validation.
+    * --output: Path to the output directory.
+
+2. Configuration
+
+    The configuration file specified by the --Config argument should be in YAML format. It should contain the following parameters:
+
+    num_workers: Number of workers for data loading.
+    train_path: Path to the training data.
+    val_path: Path to the validation data.
+
+    Make sure to update the configuration file with the appropriate values for your dataset.
+    Training
+
+##### Training
+
+During the training process, the script performs the following steps:
+
+    - Initializes the configuration settings.
+    - Writes the configuration to a YAML file.
+    - Parses the command-line arguments.
+    - Reads the configuration from the YAML file.
+    - Loads the training and validation datasets.
+    - Initializes the data loaders.
+    - Defines the loss function.
+    - Instantiates the segmentation model.
+    - Sets up callbacks for model checkpointing, CPU usage - - monitoring, and throughput logging.
+    - Starts the training using the Trainer.fit method.
+
+## Running Prediction
+
+To run the prediction script and generate segmentations for your test samples, follow the steps below:
+
+1. Ensure that you have the necessary dependencies installed. If you haven't installed them yet, refer to the [Getting Started](#getting-started) section.
+
+2. Open the terminal and navigate to the project directory.
+
+3. Run the following command to execute the `predict.py` script:
+
+   ```bash
+   python predict.py --Config path/to/config.yaml --sample path/to/test_sample.nii --output path/to/output
+   ```
+   ![Prediction](Figures/image_label_overlay_over_slice_Prediction_Test.gif)
+
+4. Note
+
+    - The --Config argument should point to the YAML configuration file that contains the necessary settings for the prediction.
+
+    - The --sample argument should provide the path to a single test sample in NIfTI format (e.g., .nii or .nii.gz).
+
+    - The --output argument specifies the directory where the generated segmentations will be saved.
+
+    > Make sure that the configuration file, test sample, and output directory paths are correct and accessible.
+    >
+    > The script will use the latest checkpoint file found in the `./Wieghts/logs` directory for loading the pre-trained model.
+    >
+    > The generated segmentations will be saved in the output directory as separate image files.
+
