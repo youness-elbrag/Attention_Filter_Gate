@@ -72,19 +72,20 @@ Through our exploration of these weaknesses, we aim to provide a better solution
         The method tackled computational cost, complexity algorithm, throughput, la-
         tency, FLOP, and enhanced feature extraction.
     * Results
-    This study evaluated the performance of two deep learning models, namely Unet and Attention Unet, for image segmentation tasks. The goal was to compare their segmentation accuracy using the mean Dice and mean IoU scores as performance metrics.
 
-    The Unet model, based on the U-Net architecture, achieved a mean Dice score of 0.86 and a mean IoU score of 0.82. These results indicate a good level of segmentation performance, with a substantial overlap and similarity between the predicted segmentations and the ground truth masks.
+        This study evaluated the performance of two deep learning models, namely Unet and Attention Unet, for image segmentation tasks. The goal was to compare their segmentation accuracy using the mean Dice and mean IoU scores as performance metrics.
 
-    On the other hand, the Attention Unet model, which incorporates attention mechanisms into the U-Net architecture, outperformed the standard Unet model. It achieved a mean Dice score of 0.90 and a mean IoU score of 0.86. The higher scores obtained by the Attention Unet model suggest that it effectively captures intricate details and improves the accuracy of the segmentation predictions.
+        The Unet model, based on the U-Net architecture, achieved a mean Dice score of 0.86 and a mean IoU score of 0.82. These results indicate a good level of segmentation performance, with a substantial overlap and similarity between the predicted segmentations and the ground truth masks.
 
-    Overall, the results demonstrate that both the Unet and Attention Unet models are effective for image segmentation tasks. However, the Attention Unet model offers superior performance, surpassing the standard Unet model in terms of both the mean Dice and mean IoU scores. These findings highlight the potential of attention mechanisms in enhancing the accuracy and quality of segmentation results.
+        On the other hand, the Attention Unet model, which incorporates attention mechanisms into the U-Net architecture, outperformed the standard Unet model. It achieved a mean Dice score of 0.90 and a mean IoU score of 0.86. The higher scores obtained by the Attention Unet model suggest that it effectively captures intricate details and improves the accuracy of the segmentation predictions.
 
-    | Model             | Mean Dice           | Mean IoU          |
-    | ----------------- | ------------------- | -------------------|
-    | Unet              | 0.8679828422922201 | 0.8268032566169375  |
-    | Attention Unet    | 0.9070712224488161 | 0.8697135584137633  |
-    | Attention Filter Unet | -- | -- |
+        Overall, the results demonstrate that both the Unet and Attention Unet models are effective for image segmentation tasks. However, the Attention Unet model offers superior performance, surpassing the standard Unet model in terms of both the mean Dice and mean IoU scores. These findings highlight the potential of attention mechanisms in enhancing the accuracy and quality of segmentation results.
+
+        | Model             | Mean Dice           | Mean IoU          |
+        | ----------------- | ------------------- | -------------------|
+        | Unet              | 0.8679828422922201 | 0.8268032566169375  |
+        | Attention Unet    | 0.9070712224488161 | 0.8697135584137633  |
+        | Attention Filter Unet | -- | -- |
 
     * Conclusion:
 
@@ -183,7 +184,11 @@ To run the prediction script and generate segmentations for your test samples, f
    ```python
    python predict.py --Config path/to/config.yaml --sample path/to/test_sample.nii --output path/to/output
    ```
-   ![Prediction](Figures/image_label_overlay_over_slice_Prediction_Test.gif)
+    <div align="center">
+    <img src="Figures/image_label_overlay_over_slice_Prediction_Test.gif"></br>
+        <figcaption>image label overlay over slice Prediction Testt</figcaption>
+    </div>
+
 
 4. Note
 
