@@ -81,10 +81,10 @@ Through our exploration of these weaknesses, we aim to provide a better solution
 
         Overall, the results demonstrate that both the Unet and Attention Unet models are effective for image segmentation tasks. However, the Attention Unet model offers superior performance, surpassing the standard Unet model in terms of both the mean Dice and mean IoU scores. These findings highlight the potential of attention mechanisms in enhancing the accuracy and quality of segmentation results.
 
-        | Model             | Mean Dice           | Mean IoU          |
-        | ----------------- | ------------------- | -------------------|
-        | Unet              | 0.8679828422922201 | 0.8268032566169375  |
-        | Attention Unet    | 0.9070712224488161 | 0.8697135584137633  |
+        | Model             | Mean Dice     | Mean IoU |
+        | ----------------- | ------------- | ----------|
+        | Unet              | 0.86 | 0.82 |
+        | Attention Unet    | 0.90| 0.86  |
         | Attention Filter Unet | -- | -- |
 
     * Conclusion:
